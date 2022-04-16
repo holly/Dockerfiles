@@ -6,7 +6,7 @@ set -u
 # 
 # docker run --rm -it --mount type=bind,src=/path/to/host_directory,dst=/data holly/python
 
-if -z "$LAMBDA_ZIP_ARCHIVE"; then
+if [ -z "$LAMBDA_ZIP_ARCHIVE" ]; then
     LAMBDA_ZIP_ARCHIVE=/data/my-deployment-package.zip 
 fi
 
